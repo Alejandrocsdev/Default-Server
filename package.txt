@@ -1,0 +1,34 @@
+1. npm init -y
+2. update scripts
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+3. npm i cors dotenv express mysql2 sequelize
+4. npm i -D nodemon sequelize-cli
+5. .env: MYSQL_DATABASE
+6. npx sequelize help
+7. npx sequelize db:create
+8 .npx sequelize db:migrate
+9 .npx sequelize db:seed:all
+10.npx sequelize model:generate --name User --attributes name:string --underscored
+11.npx sequelize migration:generate --name create-user
+12.npx sequelize seed:generate --name users
+
+.env
+# 伺服器端口
+PORT=3000
+
+# 運行環境
+NODE_ENV=development
+
+# 資料庫參數(MySQL)
+# MYSQL_DATABASE=
+# development
+MYSQL_DEV_USERNAME=root
+MYSQL_DEV_PASSWORD=password
+MYSQL_DEV_HOST=127.0.0.1
+# production (雲端平台環境變數)
+# MYSQL_PROD_USERNAME=
+# MYSQL_PROD_PASSWORD=
+# MYSQL_PROD_HOST=
